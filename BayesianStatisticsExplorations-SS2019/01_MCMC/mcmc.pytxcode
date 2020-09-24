@@ -1,0 +1,64 @@
+=>PYTHONTEX#pycon#session1#default#0#console#####6#
+import numpy as np
+import scipy as sp
+import scipy.stats as scs
+import matplotlib.pyplot as plt
+plt.style.use('seaborn')  # sets the plotting style
+np.random.seed(583920)
+
+a=0.1
+y = scs.poisson.rvs(1, size=125) # sample data
+y.mean()
+
+def l(lamb): # likelihood
+    return scs.poisson.pmf(y, lamb).prod()
+
+def prior(lamb):
+    return scs.gamma.pdf(lamb, a) # gamma prior
+=>PYTHONTEX#pycon#session1#default#1#console#####6#
+
+T = 1000
+sigma = 0.05
+x = np.zeros(T)
+z = scs.norm.rvs(size=T) # simulate proposal from normal proposal density
+u = scs.uniform.rvs(size=T)
+x[0] = 1
+for t in range(1,T):
+    s = x[t-1] + sigma * z[t-1] # proposal
+    alpha = l(s) * prior(s) / (l(x[t-1]) * prior(x[t-1])) \
+            if (l(x[t-1]) * prior(x[t-1])) > 0 else 1
+    x[t] = s if u[t] <= alpha else x[t-1]
+
+u = np.arange(0.5,1.5,0.01)
+_ = plt.hist(x, bins=20, density=True);
+alpha = a + y.sum()
+beta = 1 + len(y)
+_ = plt.plot(u, scs.gamma.pdf(u, alpha) * sp.exp(u * (1-beta)) \
+    * beta**alpha, linewidth=3);
+plt.savefig('mcmc_pic.pdf')
+print(x.mean())
+=>PYTHONTEX:SETTINGS#
+version=0.16
+outputdir=pythontex-files-mcmc
+workingdir=.
+workingdirset=false
+gobble=none
+rerun=default
+hashdependencies=default
+makestderr=true
+stderrfilename=full
+keeptemps=none
+pyfuture=default
+pyconfuture=none
+pygments=true
+pygglobal=:GLOBAL||
+fvextfile=-1
+pyconbanner=none
+pyconfilename=stdin
+depythontex=false
+pygfamily=py|python|
+pygfamily=pycon|pycon|
+pygfamily=sympy|python|
+pygfamily=sympycon|pycon|
+pygfamily=pylab|python|
+pygfamily=pylabcon|pycon|

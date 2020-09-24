@@ -1,0 +1,114 @@
+=>PYTHONTEX#pycon#vw#default#0#console#####3#
+import numpy as np
+import scipy as sp
+import pandas as pd
+import scipy.stats as scs
+import statsmodels.api as sm
+import math
+import matplotlib.pyplot as plt
+
+data = pd.read_csv('returns.csv', index_col=0)
+
+Y = data['VOW3 GY Equity']
+X = data[data.columns[0:34]]
+X = sm.add_constant(X)
+n, p = X.shape
+
+ols = sm.OLS(Y, X)
+result=ols.fit()
+#print(result.summary()) # results will be shown together with Bayes' analysis
+
+results = pd.DataFrame(result.params.round(4), columns=['OLS coef'])
+results['OLS pval'] = result.pvalues.round(4)
+=>PYTHONTEX#pycon#vw#default#1#console#####6#
+n, p = X.shape
+s = 10 # relatively non-informative prior
+lam = result.resid.var()
+nu = 25
+a = nu/2
+b = nu * lam / 2
+M = s**2 * sp.identity(p)
+Minv = sp.linalg.inv(M)
+m = np.zeros(p)
+tM = sp.linalg.inv((X.transpose()).dot(X) + Minv)
+tMinv = (X.transpose().dot(X) + Minv)
+tm = tM.dot(Minv.dot(m) + (X.transpose()).dot(Y))
+ta = a + n/2
+tb = b + 0.5 * ((Y.transpose()).dot(Y) \
+                + (m.transpose()).dot(Minv.dot(m)) \
+                - (tm.transpose()).dot(tMinv.dot(tm)))
+=>PYTHONTEX#pycon#vw#default#2#console#####7#
+results['bayes_mean'] = tm.round(4)
+results['hpd_2.5'] = [scs.t.ppf(0.025, 2*ta, loc = tm[k], \
+      scale = np.sqrt(((tb/ta) * tM)[k,k])).round(4) for k in range(len(tm))]
+results['hpd_97.5'] = [scs.t.ppf(0.975, 2*ta, loc = tm[k], \
+      scale = np.sqrt(((tb/ta) * tM)[k,k])).round(4) for k in range(len(tm))]
+=>PYTHONTEX#pycon#vw#default#3#console#####3#
+print(results[:10])
+print(results[-10:])
+=>PYTHONTEX#pycon#vw#default#4#console#####3#
+from python import BVS
+# BVS is my class for Bayesian Variable Selection
+
+bm = BVS.BayesModel(np.array(Y), np.array(X), m, 1 * M, a, b)
+
+
+# The call below produces an overflow error; this happens a lot as
+# often very large and very small constants are involved
+bm.marginal_likelihood()
+=>PYTHONTEX#pycon#vw#default#5#console#####6#
+# simulate marginal likelihood via MCMC
+x, sc = bm.simulate_posterior_probability(nsimulations=5000, rel=True, \
+         theta=8/34)
+=>PYTHONTEX#pycon#vw#default#6#console#####17#
+v0 = 0.001 * result.bse / result.resid.std()
+v1 = 1 * result.bse /result.resid.std()
+v0.index=range(p)
+v1.index=range(p)
+x2, sc2 = bm.simulate_gamma_posterior(nu, lam, v0, v1, theta=8/34, \
+         nsimulations=3000, rel=True)
+=>PYTHONTEX#pycon#vw#default#7#console#####3#
+res = None
+for k in range(p):
+    if k==0:
+        res = pd.DataFrame([[X.columns[k], \
+                         x[np.where(sc[:,k]==1)[0]].shape[0]/x.shape[0], \
+                         x2[np.where(sc2[:,k]==1)[0]].shape[0]/x2.shape[0], \
+                         result.pvalues.iloc[k]]])
+    else:
+        res = res.append([[X.columns[k], \
+                         x[np.where(sc[:,k]==1)[0]].shape[0]/x.shape[0],\
+                         x2[np.where(sc2[:,k]==1)[0]].shape[0]/x2.shape[0], \
+                         result.pvalues.iloc[k]]])
+
+res.index = range(p)
+res.columns = ['coef', 'PIP', 'BVS', 'pvalue']
+=>PYTHONTEX#pycon#vw#default#8#console#####3#
+print(res[res['PIP']>0.5].round(4))
+=>PYTHONTEX#pycon#vw#default#9#console#####3#
+print(res[res['BVS']>0.5].round(4))
+=>PYTHONTEX:SETTINGS#
+version=0.16
+outputdir=pythontex-files-bvs
+workingdir=.
+workingdirset=false
+gobble=none
+rerun=default
+hashdependencies=default
+makestderr=true
+stderrfilename=full
+keeptemps=none
+pyfuture=default
+pyconfuture=none
+pygments=true
+pygglobal=:GLOBAL||
+fvextfile=-1
+pyconbanner=none
+pyconfilename=stdin
+depythontex=false
+pygfamily=py|python|
+pygfamily=pycon|pycon|
+pygfamily=sympy|python|
+pygfamily=sympycon|pycon|
+pygfamily=pylab|python|
+pygfamily=pylabcon|pycon|

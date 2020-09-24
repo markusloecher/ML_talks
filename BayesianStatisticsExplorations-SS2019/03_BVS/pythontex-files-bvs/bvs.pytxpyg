@@ -1,0 +1,355 @@
+
+\makeatletter
+\def\PYG@reset{\let\PYG@it=\relax \let\PYG@bf=\relax%
+    \let\PYG@ul=\relax \let\PYG@tc=\relax%
+    \let\PYG@bc=\relax \let\PYG@ff=\relax}
+\def\PYG@tok#1{\csname PYG@tok@#1\endcsname}
+\def\PYG@toks#1+{\ifx\relax#1\empty\else%
+    \PYG@tok{#1}\expandafter\PYG@toks\fi}
+\def\PYG@do#1{\PYG@bc{\PYG@tc{\PYG@ul{%
+    \PYG@it{\PYG@bf{\PYG@ff{#1}}}}}}}
+\def\PYG#1#2{\PYG@reset\PYG@toks#1+\relax+\PYG@do{#2}}
+
+\expandafter\def\csname PYG@tok@w\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PYG@tok@c\endcsname{\let\PYG@it=\textit\def\PYG@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PYG@tok@cp\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.74,0.48,0.00}{##1}}}
+\expandafter\def\csname PYG@tok@k\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PYG@tok@kp\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PYG@tok@kt\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.69,0.00,0.25}{##1}}}
+\expandafter\def\csname PYG@tok@o\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PYG@tok@ow\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PYG@tok@nb\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PYG@tok@nf\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PYG@tok@nc\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PYG@tok@nn\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PYG@tok@ne\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.82,0.25,0.23}{##1}}}
+\expandafter\def\csname PYG@tok@nv\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PYG@tok@no\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.53,0.00,0.00}{##1}}}
+\expandafter\def\csname PYG@tok@nl\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.63,0.63,0.00}{##1}}}
+\expandafter\def\csname PYG@tok@ni\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.60,0.60,0.60}{##1}}}
+\expandafter\def\csname PYG@tok@na\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.49,0.56,0.16}{##1}}}
+\expandafter\def\csname PYG@tok@nt\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PYG@tok@nd\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PYG@tok@s\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PYG@tok@sd\endcsname{\let\PYG@it=\textit\def\PYG@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PYG@tok@si\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PYG@tok@se\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.73,0.40,0.13}{##1}}}
+\expandafter\def\csname PYG@tok@sr\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PYG@tok@ss\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PYG@tok@sx\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PYG@tok@m\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PYG@tok@gh\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PYG@tok@gu\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PYG@tok@gd\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PYG@tok@gi\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PYG@tok@gr\endcsname{\def\PYG@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PYG@tok@ge\endcsname{\let\PYG@it=\textit}
+\expandafter\def\csname PYG@tok@gs\endcsname{\let\PYG@bf=\textbf}
+\expandafter\def\csname PYG@tok@gp\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PYG@tok@go\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
+\expandafter\def\csname PYG@tok@gt\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
+\expandafter\def\csname PYG@tok@err\endcsname{\def\PYG@bc##1{\setlength{\fboxsep}{0pt}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}
+\expandafter\def\csname PYG@tok@kc\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PYG@tok@kd\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PYG@tok@kn\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PYG@tok@kr\endcsname{\let\PYG@bf=\textbf\def\PYG@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PYG@tok@bp\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PYG@tok@fm\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PYG@tok@vc\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PYG@tok@vg\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PYG@tok@vi\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PYG@tok@vm\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PYG@tok@sa\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PYG@tok@sb\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PYG@tok@sc\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PYG@tok@dl\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PYG@tok@s2\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PYG@tok@sh\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PYG@tok@s1\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PYG@tok@mb\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PYG@tok@mf\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PYG@tok@mh\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PYG@tok@mi\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PYG@tok@il\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PYG@tok@mo\endcsname{\def\PYG@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PYG@tok@ch\endcsname{\let\PYG@it=\textit\def\PYG@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PYG@tok@cm\endcsname{\let\PYG@it=\textit\def\PYG@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PYG@tok@cpf\endcsname{\let\PYG@it=\textit\def\PYG@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PYG@tok@c1\endcsname{\let\PYG@it=\textit\def\PYG@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PYG@tok@cs\endcsname{\let\PYG@it=\textit\def\PYG@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+
+\def\PYGZbs{\char`\\}
+\def\PYGZus{\char`\_}
+\def\PYGZob{\char`\{}
+\def\PYGZcb{\char`\}}
+\def\PYGZca{\char`\^}
+\def\PYGZam{\char`\&}
+\def\PYGZlt{\char`\<}
+\def\PYGZgt{\char`\>}
+\def\PYGZsh{\char`\#}
+\def\PYGZpc{\char`\%}
+\def\PYGZdl{\char`\$}
+\def\PYGZhy{\char`\-}
+\def\PYGZsq{\char`\'}
+\def\PYGZdq{\char`\"}
+\def\PYGZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYGZat{@}
+\def\PYGZlb{[}
+\def\PYGZrb{]}
+\makeatother
+
+\makeatletter
+\def\PYGdefault@reset{\let\PYGdefault@it=\relax \let\PYGdefault@bf=\relax%
+    \let\PYGdefault@ul=\relax \let\PYGdefault@tc=\relax%
+    \let\PYGdefault@bc=\relax \let\PYGdefault@ff=\relax}
+\def\PYGdefault@tok#1{\csname PYGdefault@tok@#1\endcsname}
+\def\PYGdefault@toks#1+{\ifx\relax#1\empty\else%
+    \PYGdefault@tok{#1}\expandafter\PYGdefault@toks\fi}
+\def\PYGdefault@do#1{\PYGdefault@bc{\PYGdefault@tc{\PYGdefault@ul{%
+    \PYGdefault@it{\PYGdefault@bf{\PYGdefault@ff{#1}}}}}}}
+\def\PYGdefault#1#2{\PYGdefault@reset\PYGdefault@toks#1+\relax+\PYGdefault@do{#2}}
+
+\expandafter\def\csname PYGdefault@tok@w\endcsname{\def\PYGdefault@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PYGdefault@tok@c\endcsname{\let\PYGdefault@it=\textit\def\PYGdefault@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PYGdefault@tok@cp\endcsname{\def\PYGdefault@tc##1{\textcolor[rgb]{0.74,0.48,0.00}{##1}}}
+\expandafter\def\csname PYGdefault@tok@k\endcsname{\let\PYGdefault@bf=\textbf\def\PYGdefault@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PYGdefault@tok@kp\endcsname{\def\PYGdefault@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PYGdefault@tok@kt\endcsname{\def\PYGdefault@tc##1{\textcolor[rgb]{0.69,0.00,0.25}{##1}}}
+\expandafter\def\csname PYGdefault@tok@o\endcsname{\def\PYGdefault@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PYGdefault@tok@ow\endcsname{\let\PYGdefault@bf=\textbf\def\PYGdefault@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PYGdefault@tok@nb\endcsname{\def\PYGdefault@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PYGdefault@tok@nf\endcsname{\def\PYGdefault@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PYGdefault@tok@nc\endcsname{\let\PYGdefault@bf=\textbf\def\PYGdefault@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PYGdefault@tok@nn\endcsname{\let\PYGdefault@bf=\textbf\def\PYGdefault@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PYGdefault@tok@ne\endcsname{\let\PYGdefault@bf=\textbf\def\PYGdefault@tc##1{\textcolor[rgb]{0.82,0.25,0.23}{##1}}}
+\expandafter\def\csname PYGdefault@tok@nv\endcsname{\def\PYGdefault@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PYGdefault@tok@no\endcsname{\def\PYGdefault@tc##1{\textcolor[rgb]{0.53,0.00,0.00}{##1}}}
+\expandafter\def\csname PYGdefault@tok@nl\endcsname{\def\PYGdefault@tc##1{\textcolor[rgb]{0.63,0.63,0.00}{##1}}}
+\expandafter\def\csname PYGdefault@tok@ni\endcsname{\let\PYGdefault@bf=\textbf\def\PYGdefault@tc##1{\textcolor[rgb]{0.60,0.60,0.60}{##1}}}
+\expandafter\def\csname PYGdefault@tok@na\endcsname{\def\PYGdefault@tc##1{\textcolor[rgb]{0.49,0.56,0.16}{##1}}}
+\expandafter\def\csname PYGdefault@tok@nt\endcsname{\let\PYGdefault@bf=\textbf\def\PYGdefault@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PYGdefault@tok@nd\endcsname{\def\PYGdefault@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PYGdefault@tok@s\endcsname{\def\PYGdefault@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PYGdefault@tok@sd\endcsname{\let\PYGdefault@it=\textit\def\PYGdefault@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PYGdefault@tok@si\endcsname{\let\PYGdefault@bf=\textbf\def\PYGdefault@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PYGdefault@tok@se\endcsname{\let\PYGdefault@bf=\textbf\def\PYGdefault@tc##1{\textcolor[rgb]{0.73,0.40,0.13}{##1}}}
+\expandafter\def\csname PYGdefault@tok@sr\endcsname{\def\PYGdefault@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PYGdefault@tok@ss\endcsname{\def\PYGdefault@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PYGdefault@tok@sx\endcsname{\def\PYGdefault@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PYGdefault@tok@m\endcsname{\def\PYGdefault@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PYGdefault@tok@gh\endcsname{\let\PYGdefault@bf=\textbf\def\PYGdefault@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PYGdefault@tok@gu\endcsname{\let\PYGdefault@bf=\textbf\def\PYGdefault@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PYGdefault@tok@gd\endcsname{\def\PYGdefault@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PYGdefault@tok@gi\endcsname{\def\PYGdefault@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PYGdefault@tok@gr\endcsname{\def\PYGdefault@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PYGdefault@tok@ge\endcsname{\let\PYGdefault@it=\textit}
+\expandafter\def\csname PYGdefault@tok@gs\endcsname{\let\PYGdefault@bf=\textbf}
+\expandafter\def\csname PYGdefault@tok@gp\endcsname{\let\PYGdefault@bf=\textbf\def\PYGdefault@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PYGdefault@tok@go\endcsname{\def\PYGdefault@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
+\expandafter\def\csname PYGdefault@tok@gt\endcsname{\def\PYGdefault@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
+\expandafter\def\csname PYGdefault@tok@err\endcsname{\def\PYGdefault@bc##1{\setlength{\fboxsep}{0pt}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}
+\expandafter\def\csname PYGdefault@tok@kc\endcsname{\let\PYGdefault@bf=\textbf\def\PYGdefault@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PYGdefault@tok@kd\endcsname{\let\PYGdefault@bf=\textbf\def\PYGdefault@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PYGdefault@tok@kn\endcsname{\let\PYGdefault@bf=\textbf\def\PYGdefault@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PYGdefault@tok@kr\endcsname{\let\PYGdefault@bf=\textbf\def\PYGdefault@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PYGdefault@tok@bp\endcsname{\def\PYGdefault@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PYGdefault@tok@fm\endcsname{\def\PYGdefault@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PYGdefault@tok@vc\endcsname{\def\PYGdefault@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PYGdefault@tok@vg\endcsname{\def\PYGdefault@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PYGdefault@tok@vi\endcsname{\def\PYGdefault@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PYGdefault@tok@vm\endcsname{\def\PYGdefault@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PYGdefault@tok@sa\endcsname{\def\PYGdefault@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PYGdefault@tok@sb\endcsname{\def\PYGdefault@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PYGdefault@tok@sc\endcsname{\def\PYGdefault@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PYGdefault@tok@dl\endcsname{\def\PYGdefault@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PYGdefault@tok@s2\endcsname{\def\PYGdefault@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PYGdefault@tok@sh\endcsname{\def\PYGdefault@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PYGdefault@tok@s1\endcsname{\def\PYGdefault@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PYGdefault@tok@mb\endcsname{\def\PYGdefault@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PYGdefault@tok@mf\endcsname{\def\PYGdefault@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PYGdefault@tok@mh\endcsname{\def\PYGdefault@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PYGdefault@tok@mi\endcsname{\def\PYGdefault@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PYGdefault@tok@il\endcsname{\def\PYGdefault@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PYGdefault@tok@mo\endcsname{\def\PYGdefault@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PYGdefault@tok@ch\endcsname{\let\PYGdefault@it=\textit\def\PYGdefault@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PYGdefault@tok@cm\endcsname{\let\PYGdefault@it=\textit\def\PYGdefault@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PYGdefault@tok@cpf\endcsname{\let\PYGdefault@it=\textit\def\PYGdefault@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PYGdefault@tok@c1\endcsname{\let\PYGdefault@it=\textit\def\PYGdefault@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PYGdefault@tok@cs\endcsname{\let\PYGdefault@it=\textit\def\PYGdefault@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+
+\def\PYGdefaultZbs{\char`\\}
+\def\PYGdefaultZus{\char`\_}
+\def\PYGdefaultZob{\char`\{}
+\def\PYGdefaultZcb{\char`\}}
+\def\PYGdefaultZca{\char`\^}
+\def\PYGdefaultZam{\char`\&}
+\def\PYGdefaultZlt{\char`\<}
+\def\PYGdefaultZgt{\char`\>}
+\def\PYGdefaultZsh{\char`\#}
+\def\PYGdefaultZpc{\char`\%}
+\def\PYGdefaultZdl{\char`\$}
+\def\PYGdefaultZhy{\char`\-}
+\def\PYGdefaultZsq{\char`\'}
+\def\PYGdefaultZdq{\char`\"}
+\def\PYGdefaultZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYGdefaultZat{@}
+\def\PYGdefaultZlb{[}
+\def\PYGdefaultZrb{]}
+\makeatother
+\begin{pytx@SaveVerbatim}[commandchars=\\\{\}]{pytx@pycon@vw@default@0}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{k+kn}{import} \PYG{n+nn}{numpy} \PYG{k+kn}{as} \PYG{n+nn}{np}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{k+kn}{import} \PYG{n+nn}{scipy} \PYG{k+kn}{as} \PYG{n+nn}{sp}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{k+kn}{import} \PYG{n+nn}{pandas} \PYG{k+kn}{as} \PYG{n+nn}{pd}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{k+kn}{import} \PYG{n+nn}{scipy.stats} \PYG{k+kn}{as} \PYG{n+nn}{scs}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{k+kn}{import} \PYG{n+nn}{statsmodels.api} \PYG{k+kn}{as} \PYG{n+nn}{sm}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{k+kn}{import} \PYG{n+nn}{math}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{k+kn}{import} \PYG{n+nn}{matplotlib.pyplot} \PYG{k+kn}{as} \PYG{n+nn}{plt}
+
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{data} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{read\PYGZus{}csv}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{returns.csv}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{index\PYGZus{}col}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{)}
+
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{Y} \PYG{o}{=} \PYG{n}{data}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{VOW3 GY Equity}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{X} \PYG{o}{=} \PYG{n}{data}\PYG{p}{[}\PYG{n}{data}\PYG{o}{.}\PYG{n}{columns}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{:}\PYG{l+m+mi}{34}\PYG{p}{]}\PYG{p}{]}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{X} \PYG{o}{=} \PYG{n}{sm}\PYG{o}{.}\PYG{n}{add\PYGZus{}constant}\PYG{p}{(}\PYG{n}{X}\PYG{p}{)}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{n}\PYG{p}{,} \PYG{n}{p} \PYG{o}{=} \PYG{n}{X}\PYG{o}{.}\PYG{n}{shape}
+
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{ols} \PYG{o}{=} \PYG{n}{sm}\PYG{o}{.}\PYG{n}{OLS}\PYG{p}{(}\PYG{n}{Y}\PYG{p}{,} \PYG{n}{X}\PYG{p}{)}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{result}\PYG{o}{=}\PYG{n}{ols}\PYG{o}{.}\PYG{n}{fit}\PYG{p}{(}\PYG{p}{)}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{c+c1}{\PYGZsh{}print(result.summary()) \PYGZsh{} results will be shown together with Bayes\PYGZsq{} analysis}
+
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{results} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{DataFrame}\PYG{p}{(}\PYG{n}{result}\PYG{o}{.}\PYG{n}{params}\PYG{o}{.}\PYG{n}{round}\PYG{p}{(}\PYG{l+m+mi}{4}\PYG{p}{)}\PYG{p}{,} \PYG{n}{columns}\PYG{o}{=}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{OLS coef}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{)}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{results}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{OLS pval}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{result}\PYG{o}{.}\PYG{n}{pvalues}\PYG{o}{.}\PYG{n}{round}\PYG{p}{(}\PYG{l+m+mi}{4}\PYG{p}{)}
+\end{pytx@SaveVerbatim}
+
+\begin{pytx@SaveVerbatim}[commandchars=\\\{\}]{pytx@pycon@vw@default@1}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{n}\PYG{p}{,} \PYG{n}{p} \PYG{o}{=} \PYG{n}{X}\PYG{o}{.}\PYG{n}{shape}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{s} \PYG{o}{=} \PYG{l+m+mi}{10} \PYG{c+c1}{\PYGZsh{} relatively non\PYGZhy{}informative prior}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{lam} \PYG{o}{=} \PYG{n}{result}\PYG{o}{.}\PYG{n}{resid}\PYG{o}{.}\PYG{n}{var}\PYG{p}{(}\PYG{p}{)}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{nu} \PYG{o}{=} \PYG{l+m+mi}{25}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{a} \PYG{o}{=} \PYG{n}{nu}\PYG{o}{/}\PYG{l+m+mi}{2}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{b} \PYG{o}{=} \PYG{n}{nu} \PYG{o}{*} \PYG{n}{lam} \PYG{o}{/} \PYG{l+m+mi}{2}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{M} \PYG{o}{=} \PYG{n}{s}\PYG{o}{*}\PYG{o}{*}\PYG{l+m+mi}{2} \PYG{o}{*} \PYG{n}{sp}\PYG{o}{.}\PYG{n}{identity}\PYG{p}{(}\PYG{n}{p}\PYG{p}{)}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{Minv} \PYG{o}{=} \PYG{n}{sp}\PYG{o}{.}\PYG{n}{linalg}\PYG{o}{.}\PYG{n}{inv}\PYG{p}{(}\PYG{n}{M}\PYG{p}{)}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{m} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{zeros}\PYG{p}{(}\PYG{n}{p}\PYG{p}{)}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{tM} \PYG{o}{=} \PYG{n}{sp}\PYG{o}{.}\PYG{n}{linalg}\PYG{o}{.}\PYG{n}{inv}\PYG{p}{(}\PYG{p}{(}\PYG{n}{X}\PYG{o}{.}\PYG{n}{transpose}\PYG{p}{(}\PYG{p}{)}\PYG{p}{)}\PYG{o}{.}\PYG{n}{dot}\PYG{p}{(}\PYG{n}{X}\PYG{p}{)} \PYG{o}{+} \PYG{n}{Minv}\PYG{p}{)}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{tMinv} \PYG{o}{=} \PYG{p}{(}\PYG{n}{X}\PYG{o}{.}\PYG{n}{transpose}\PYG{p}{(}\PYG{p}{)}\PYG{o}{.}\PYG{n}{dot}\PYG{p}{(}\PYG{n}{X}\PYG{p}{)} \PYG{o}{+} \PYG{n}{Minv}\PYG{p}{)}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{tm} \PYG{o}{=} \PYG{n}{tM}\PYG{o}{.}\PYG{n}{dot}\PYG{p}{(}\PYG{n}{Minv}\PYG{o}{.}\PYG{n}{dot}\PYG{p}{(}\PYG{n}{m}\PYG{p}{)} \PYG{o}{+} \PYG{p}{(}\PYG{n}{X}\PYG{o}{.}\PYG{n}{transpose}\PYG{p}{(}\PYG{p}{)}\PYG{p}{)}\PYG{o}{.}\PYG{n}{dot}\PYG{p}{(}\PYG{n}{Y}\PYG{p}{)}\PYG{p}{)}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{ta} \PYG{o}{=} \PYG{n}{a} \PYG{o}{+} \PYG{n}{n}\PYG{o}{/}\PYG{l+m+mi}{2}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{tb} \PYG{o}{=} \PYG{n}{b} \PYG{o}{+} \PYG{l+m+mf}{0.5} \PYG{o}{*} \PYG{p}{(}\PYG{p}{(}\PYG{n}{Y}\PYG{o}{.}\PYG{n}{transpose}\PYG{p}{(}\PYG{p}{)}\PYG{p}{)}\PYG{o}{.}\PYG{n}{dot}\PYG{p}{(}\PYG{n}{Y}\PYG{p}{)} \PYGZbs{}
+\PYG{g+gp}{... }                \PYG{o}{+} \PYG{p}{(}\PYG{n}{m}\PYG{o}{.}\PYG{n}{transpose}\PYG{p}{(}\PYG{p}{)}\PYG{p}{)}\PYG{o}{.}\PYG{n}{dot}\PYG{p}{(}\PYG{n}{Minv}\PYG{o}{.}\PYG{n}{dot}\PYG{p}{(}\PYG{n}{m}\PYG{p}{)}\PYG{p}{)} \PYGZbs{}
+\PYG{g+gp}{... }                \PYG{o}{\PYGZhy{}} \PYG{p}{(}\PYG{n}{tm}\PYG{o}{.}\PYG{n}{transpose}\PYG{p}{(}\PYG{p}{)}\PYG{p}{)}\PYG{o}{.}\PYG{n}{dot}\PYG{p}{(}\PYG{n}{tMinv}\PYG{o}{.}\PYG{n}{dot}\PYG{p}{(}\PYG{n}{tm}\PYG{p}{)}\PYG{p}{)}\PYG{p}{)}
+\end{pytx@SaveVerbatim}
+
+\begin{pytx@SaveVerbatim}[commandchars=\\\{\}]{pytx@pycon@vw@default@2}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{results}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{bayes\PYGZus{}mean}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{tm}\PYG{o}{.}\PYG{n}{round}\PYG{p}{(}\PYG{l+m+mi}{4}\PYG{p}{)}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{results}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{hpd\PYGZus{}2.5}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]} \PYG{o}{=} \PYG{p}{[}\PYG{n}{scs}\PYG{o}{.}\PYG{n}{t}\PYG{o}{.}\PYG{n}{ppf}\PYG{p}{(}\PYG{l+m+mf}{0.025}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n}{ta}\PYG{p}{,} \PYG{n}{loc} \PYG{o}{=} \PYG{n}{tm}\PYG{p}{[}\PYG{n}{k}\PYG{p}{]}\PYG{p}{,} \PYGZbs{}
+\PYG{g+gp}{... }      \PYG{n}{scale} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{sqrt}\PYG{p}{(}\PYG{p}{(}\PYG{p}{(}\PYG{n}{tb}\PYG{o}{/}\PYG{n}{ta}\PYG{p}{)} \PYG{o}{*} \PYG{n}{tM}\PYG{p}{)}\PYG{p}{[}\PYG{n}{k}\PYG{p}{,}\PYG{n}{k}\PYG{p}{]}\PYG{p}{)}\PYG{p}{)}\PYG{o}{.}\PYG{n}{round}\PYG{p}{(}\PYG{l+m+mi}{4}\PYG{p}{)} \PYG{k}{for} \PYG{n}{k} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{tm}\PYG{p}{)}\PYG{p}{)}\PYG{p}{]}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{results}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{hpd\PYGZus{}97.5}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]} \PYG{o}{=} \PYG{p}{[}\PYG{n}{scs}\PYG{o}{.}\PYG{n}{t}\PYG{o}{.}\PYG{n}{ppf}\PYG{p}{(}\PYG{l+m+mf}{0.975}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n}{ta}\PYG{p}{,} \PYG{n}{loc} \PYG{o}{=} \PYG{n}{tm}\PYG{p}{[}\PYG{n}{k}\PYG{p}{]}\PYG{p}{,} \PYGZbs{}
+\PYG{g+gp}{... }      \PYG{n}{scale} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{sqrt}\PYG{p}{(}\PYG{p}{(}\PYG{p}{(}\PYG{n}{tb}\PYG{o}{/}\PYG{n}{ta}\PYG{p}{)} \PYG{o}{*} \PYG{n}{tM}\PYG{p}{)}\PYG{p}{[}\PYG{n}{k}\PYG{p}{,}\PYG{n}{k}\PYG{p}{]}\PYG{p}{)}\PYG{p}{)}\PYG{o}{.}\PYG{n}{round}\PYG{p}{(}\PYG{l+m+mi}{4}\PYG{p}{)} \PYG{k}{for} \PYG{n}{k} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{tm}\PYG{p}{)}\PYG{p}{)}\PYG{p}{]}
+\end{pytx@SaveVerbatim}
+
+\begin{pytx@SaveVerbatim}[commandchars=\\\{\}]{pytx@pycon@vw@default@3}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{k}{print}\PYG{p}{(}\PYG{n}{results}\PYG{p}{[}\PYG{p}{:}\PYG{l+m+mi}{10}\PYG{p}{]}\PYG{p}{)}
+\PYG{g+go}{               OLS coef  OLS pval  bayes\PYGZus{}mean  hpd\PYGZus{}2.5  hpd\PYGZus{}97.5}
+\PYG{g+go}{const            0.0002    0.4813      0.0002  \PYGZhy{}0.0004    0.0009}
+\PYG{g+go}{MXWO0EN Index    0.1265    0.0863      0.0429  \PYGZhy{}0.0579    0.1437}
+\PYG{g+go}{MXWO0MT Index   \PYGZhy{}0.0832    0.3206     \PYGZhy{}0.0873  \PYGZhy{}0.2233    0.0488}
+\PYG{g+go}{MXWO0IN Index    0.2915    0.0261      0.1961   0.0001    0.3921}
+\PYG{g+go}{MXWO0CD Index    1.1367    0.0000      0.8980   0.7264    1.0695}
+\PYG{g+go}{MXWO0CS Index    0.0677    0.5662     \PYGZhy{}0.0010  \PYGZhy{}0.1765    0.1744}
+\PYG{g+go}{MXWO0HC Index    0.0302    0.7665     \PYGZhy{}0.0600  \PYGZhy{}0.2001    0.0801}
+\PYG{g+go}{MXWO0FN Index    0.0502    0.7136     \PYGZhy{}0.0627  \PYGZhy{}0.2137    0.0882}
+\PYG{g+go}{MXWO0IT Index   \PYGZhy{}0.1022    0.3036     \PYGZhy{}0.1466  \PYGZhy{}0.2710   \PYGZhy{}0.0222}
+\PYG{g+go}{MXWO0TC Index   \PYGZhy{}0.2037    0.0017     \PYGZhy{}0.2137  \PYGZhy{}0.3277   \PYGZhy{}0.0998}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{k}{print}\PYG{p}{(}\PYG{n}{results}\PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{10}\PYG{p}{:}\PYG{p}{]}\PYG{p}{)}
+\PYG{g+go}{         OLS coef  OLS pval  bayes\PYGZus{}mean  hpd\PYGZus{}2.5  hpd\PYGZus{}97.5}
+\PYG{g+go}{MSDUCA     0.0387    0.4697      0.0448  \PYGZhy{}0.0500    0.1396}
+\PYG{g+go}{MXUS      \PYGZhy{}0.5276    0.1229     \PYGZhy{}0.0974  \PYGZhy{}0.3889    0.1942}
+\PYG{g+go}{MXIL      \PYGZhy{}0.0230    0.4517     \PYGZhy{}0.0201  \PYGZhy{}0.0795    0.0393}
+\PYG{g+go}{MSDUSPT   \PYGZhy{}0.1003    0.0071     \PYGZhy{}0.0986  \PYGZhy{}0.1705   \PYGZhy{}0.0268}
+\PYG{g+go}{MSDUIT     0.1406    0.0071      0.1377   0.0401    0.2354}
+\PYG{g+go}{MSDUHK     0.0854    0.0228      0.0898   0.0182    0.1615}
+\PYG{g+go}{MSDUIE     0.1028    0.0002      0.1012   0.0474    0.1551}
+\PYG{g+go}{MSDUDE    \PYGZhy{}0.0410    0.2912     \PYGZhy{}0.0405  \PYGZhy{}0.1153    0.0344}
+\PYG{g+go}{MSDUNO     0.0384    0.2416      0.0346  \PYGZhy{}0.0287    0.0979}
+\PYG{g+go}{MSDUGR     1.1242    0.0000      1.0695   0.9574    1.1815}
+\end{pytx@SaveVerbatim}
+
+\begin{pytx@SaveVerbatim}[commandchars=\\\{\}]{pytx@pycon@vw@default@4}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{k+kn}{from} \PYG{n+nn}{python} \PYG{k+kn}{import} \PYG{n}{BVS}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{c+c1}{\PYGZsh{} BVS is my class for Bayesian Variable Selection}
+
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{bm} \PYG{o}{=} \PYG{n}{BVS}\PYG{o}{.}\PYG{n}{BayesModel}\PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{(}\PYG{n}{Y}\PYG{p}{)}\PYG{p}{,} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{(}\PYG{n}{X}\PYG{p}{)}\PYG{p}{,} \PYG{n}{m}\PYG{p}{,} \PYG{l+m+mi}{1} \PYG{o}{*} \PYG{n}{M}\PYG{p}{,} \PYG{n}{a}\PYG{p}{,} \PYG{n}{b}\PYG{p}{)}
+
+
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{c+c1}{\PYGZsh{} The call below produces an overflow error; this happens a lot as}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{c+c1}{\PYGZsh{} often very large and very small constants are involved}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{bm}\PYG{o}{.}\PYG{n}{marginal\PYGZus{}likelihood}\PYG{p}{(}\PYG{p}{)}
+\PYG{g+gt}{Traceback (most recent call last):}
+  File \PYG{n+nb}{\PYGZdq{}\PYGZlt{}stdin\PYGZgt{}\PYGZdq{}}, line \PYG{l+m}{1}, in \PYG{n}{\PYGZlt{}module\PYGZgt{}}
+  File \PYG{n+nb}{\PYGZdq{}/Users/nat/Documents/GitHub/BayesianStatisticsExplorations/03\PYGZus{}BVS/python/BVS.py\PYGZdq{}}, line \PYG{l+m}{103}, in \PYG{n}{marginal\PYGZus{}likelihood}
+    \PYG{o}{*} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}b}\PYG{o}{*}\PYG{o}{*}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}a} \PYG{o}{/} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}tb}\PYG{o}{*}\PYG{o}{*}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}ta} \PYG{o}{*} \PYG{n}{math}\PYG{o}{.}\PYG{n}{gamma}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}ta}\PYG{p}{)} \PYG{o}{/} \PYG{n}{math}\PYG{o}{.}\PYG{n}{gamma}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}a}\PYG{p}{)}
+\PYG{g+gr}{OverflowError}: \PYG{n}{(34, \PYGZsq{}Result too large\PYGZsq{})}
+\end{pytx@SaveVerbatim}
+
+\begin{pytx@SaveVerbatim}[commandchars=\\\{\}]{pytx@pycon@vw@default@5}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{c+c1}{\PYGZsh{} simulate marginal likelihood via MCMC}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{x}\PYG{p}{,} \PYG{n}{sc} \PYG{o}{=} \PYG{n}{bm}\PYG{o}{.}\PYG{n}{simulate\PYGZus{}posterior\PYGZus{}probability}\PYG{p}{(}\PYG{n}{nsimulations}\PYG{o}{=}\PYG{l+m+mi}{5000}\PYG{p}{,} \PYG{n}{rel}\PYG{o}{=}\PYG{n+nb+bp}{True}\PYG{p}{,} \PYGZbs{}
+\PYG{g+gp}{... }         \PYG{n}{theta}\PYG{o}{=}\PYG{l+m+mi}{8}\PYG{o}{/}\PYG{l+m+mi}{34}\PYG{p}{)}
+\end{pytx@SaveVerbatim}
+
+\begin{pytx@SaveVerbatim}[commandchars=\\\{\}]{pytx@pycon@vw@default@6}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{v0} \PYG{o}{=} \PYG{l+m+mf}{0.001} \PYG{o}{*} \PYG{n}{result}\PYG{o}{.}\PYG{n}{bse} \PYG{o}{/} \PYG{n}{result}\PYG{o}{.}\PYG{n}{resid}\PYG{o}{.}\PYG{n}{std}\PYG{p}{(}\PYG{p}{)}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{v1} \PYG{o}{=} \PYG{l+m+mi}{1} \PYG{o}{*} \PYG{n}{result}\PYG{o}{.}\PYG{n}{bse} \PYG{o}{/}\PYG{n}{result}\PYG{o}{.}\PYG{n}{resid}\PYG{o}{.}\PYG{n}{std}\PYG{p}{(}\PYG{p}{)}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{v0}\PYG{o}{.}\PYG{n}{index}\PYG{o}{=}\PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{p}\PYG{p}{)}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{v1}\PYG{o}{.}\PYG{n}{index}\PYG{o}{=}\PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{p}\PYG{p}{)}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{x2}\PYG{p}{,} \PYG{n}{sc2} \PYG{o}{=} \PYG{n}{bm}\PYG{o}{.}\PYG{n}{simulate\PYGZus{}gamma\PYGZus{}posterior}\PYG{p}{(}\PYG{n}{nu}\PYG{p}{,} \PYG{n}{lam}\PYG{p}{,} \PYG{n}{v0}\PYG{p}{,} \PYG{n}{v1}\PYG{p}{,} \PYG{n}{theta}\PYG{o}{=}\PYG{l+m+mi}{8}\PYG{o}{/}\PYG{l+m+mi}{34}\PYG{p}{,} \PYGZbs{}
+\PYG{g+gp}{... }         \PYG{n}{nsimulations}\PYG{o}{=}\PYG{l+m+mi}{3000}\PYG{p}{,} \PYG{n}{rel}\PYG{o}{=}\PYG{n+nb+bp}{True}\PYG{p}{)}
+\end{pytx@SaveVerbatim}
+
+\begin{pytx@SaveVerbatim}[commandchars=\\\{\}]{pytx@pycon@vw@default@7}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{res} \PYG{o}{=} \PYG{n+nb+bp}{None}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{k}{for} \PYG{n}{k} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{p}\PYG{p}{)}\PYG{p}{:}
+\PYG{g+gp}{... }    \PYG{k}{if} \PYG{n}{k}\PYG{o}{==}\PYG{l+m+mi}{0}\PYG{p}{:}
+\PYG{g+gp}{... }        \PYG{n}{res} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{DataFrame}\PYG{p}{(}\PYG{p}{[}\PYG{p}{[}\PYG{n}{X}\PYG{o}{.}\PYG{n}{columns}\PYG{p}{[}\PYG{n}{k}\PYG{p}{]}\PYG{p}{,} \PYGZbs{}
+\PYG{g+gp}{... }                         \PYG{n}{x}\PYG{p}{[}\PYG{n}{np}\PYG{o}{.}\PYG{n}{where}\PYG{p}{(}\PYG{n}{sc}\PYG{p}{[}\PYG{p}{:}\PYG{p}{,}\PYG{n}{k}\PYG{p}{]}\PYG{o}{==}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{]}\PYG{o}{.}\PYG{n}{shape}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{o}{/}\PYG{n}{x}\PYG{o}{.}\PYG{n}{shape}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{,} \PYGZbs{}
+\PYG{g+gp}{... }                         \PYG{n}{x2}\PYG{p}{[}\PYG{n}{np}\PYG{o}{.}\PYG{n}{where}\PYG{p}{(}\PYG{n}{sc2}\PYG{p}{[}\PYG{p}{:}\PYG{p}{,}\PYG{n}{k}\PYG{p}{]}\PYG{o}{==}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{]}\PYG{o}{.}\PYG{n}{shape}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{o}{/}\PYG{n}{x2}\PYG{o}{.}\PYG{n}{shape}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{,} \PYGZbs{}
+\PYG{g+gp}{... }                         \PYG{n}{result}\PYG{o}{.}\PYG{n}{pvalues}\PYG{o}{.}\PYG{n}{iloc}\PYG{p}{[}\PYG{n}{k}\PYG{p}{]}\PYG{p}{]}\PYG{p}{]}\PYG{p}{)}
+\PYG{g+gp}{... }    \PYG{k}{else}\PYG{p}{:}
+\PYG{g+gp}{... }        \PYG{n}{res} \PYG{o}{=} \PYG{n}{res}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{p}{[}\PYG{p}{[}\PYG{n}{X}\PYG{o}{.}\PYG{n}{columns}\PYG{p}{[}\PYG{n}{k}\PYG{p}{]}\PYG{p}{,} \PYGZbs{}
+\PYG{g+gp}{... }                         \PYG{n}{x}\PYG{p}{[}\PYG{n}{np}\PYG{o}{.}\PYG{n}{where}\PYG{p}{(}\PYG{n}{sc}\PYG{p}{[}\PYG{p}{:}\PYG{p}{,}\PYG{n}{k}\PYG{p}{]}\PYG{o}{==}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{]}\PYG{o}{.}\PYG{n}{shape}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{o}{/}\PYG{n}{x}\PYG{o}{.}\PYG{n}{shape}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{,}\PYGZbs{}
+\PYG{g+gp}{... }                         \PYG{n}{x2}\PYG{p}{[}\PYG{n}{np}\PYG{o}{.}\PYG{n}{where}\PYG{p}{(}\PYG{n}{sc2}\PYG{p}{[}\PYG{p}{:}\PYG{p}{,}\PYG{n}{k}\PYG{p}{]}\PYG{o}{==}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{]}\PYG{o}{.}\PYG{n}{shape}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{o}{/}\PYG{n}{x2}\PYG{o}{.}\PYG{n}{shape}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{,} \PYGZbs{}
+\PYG{g+gp}{... }                         \PYG{n}{result}\PYG{o}{.}\PYG{n}{pvalues}\PYG{o}{.}\PYG{n}{iloc}\PYG{p}{[}\PYG{n}{k}\PYG{p}{]}\PYG{p}{]}\PYG{p}{]}\PYG{p}{)}
+\PYG{g+gp}{... }
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{res}\PYG{o}{.}\PYG{n}{index} \PYG{o}{=} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{p}\PYG{p}{)}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{res}\PYG{o}{.}\PYG{n}{columns} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{coef}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PIP}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{BVS}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{pvalue}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}
+\end{pytx@SaveVerbatim}
+
+\begin{pytx@SaveVerbatim}[commandchars=\\\{\}]{pytx@pycon@vw@default@8}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{k}{print}\PYG{p}{(}\PYG{n}{res}\PYG{p}{[}\PYG{n}{res}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PIP}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{o}{\PYGZgt{}}\PYG{l+m+mf}{0.5}\PYG{p}{]}\PYG{o}{.}\PYG{n}{round}\PYG{p}{(}\PYG{l+m+mi}{4}\PYG{p}{)}\PYG{p}{)}
+\PYG{g+go}{             coef     PIP     BVS  pvalue}
+\PYG{g+go}{4   MXWO0CD Index  1.0000  1.0000  0.0000}
+\PYG{g+go}{9   MXWO0TC Index  0.9848  0.9900  0.0017}
+\PYG{g+go}{10  MXWO0UT Index  0.9996  1.0000  0.0000}
+\PYG{g+go}{18         MSDUSZ  0.6788  0.4940  0.0105}
+\PYG{g+go}{19         MSDUAT  0.7998  0.7613  0.0000}
+\PYG{g+go}{34         MSDUGR  1.0000  1.0000  0.0000}
+\end{pytx@SaveVerbatim}
+
+\begin{pytx@SaveVerbatim}[commandchars=\\\{\}]{pytx@pycon@vw@default@9}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{k}{print}\PYG{p}{(}\PYG{n}{res}\PYG{p}{[}\PYG{n}{res}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{BVS}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{o}{\PYGZgt{}}\PYG{l+m+mf}{0.5}\PYG{p}{]}\PYG{o}{.}\PYG{n}{round}\PYG{p}{(}\PYG{l+m+mi}{4}\PYG{p}{)}\PYG{p}{)}
+\PYG{g+go}{             coef     PIP     BVS  pvalue}
+\PYG{g+go}{3   MXWO0IN Index  0.0890  0.6687  0.0261}
+\PYG{g+go}{4   MXWO0CD Index  1.0000  1.0000  0.0000}
+\PYG{g+go}{9   MXWO0TC Index  0.9848  0.9900  0.0017}
+\PYG{g+go}{10  MXWO0UT Index  0.9996  1.0000  0.0000}
+\PYG{g+go}{11  MXWO0RE Index  0.1344  0.7783  0.0043}
+\PYG{g+go}{19         MSDUAT  0.7998  0.7613  0.0000}
+\PYG{g+go}{23         MSDUJN  0.1216  0.8843  0.0160}
+\PYG{g+go}{28        MSDUSPT  0.2942  0.6920  0.0071}
+\PYG{g+go}{29         MSDUIT  0.1734  0.6517  0.0071}
+\PYG{g+go}{31         MSDUIE  0.3484  0.6263  0.0002}
+\PYG{g+go}{34         MSDUGR  1.0000  1.0000  0.0000}
+\end{pytx@SaveVerbatim}
+

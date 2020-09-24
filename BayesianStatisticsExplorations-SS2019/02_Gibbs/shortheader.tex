@@ -1,0 +1,113 @@
+
+
+\definecolor{fsblue}{RGB}{0, 72, 128}
+\definecolor{fsblue}{RGB}{54,66,109}
+\definecolor{lightgrey}{RGB}{245,245,245}
+\definecolor{mygrey}{RGB}{230,230,230}
+\setbeamercolor{author in head/foot}{bg=fsblue}
+%\setbeamercolor{title in head/foot}{bg=fsblue}
+%\setbeamercolor{title in head/foot}{bg=white,fg=darkblue}
+%\setbeamercolor{author in head/foot}{bg=white,fg=darkblue}
+%\setbeamerfont{frametitle}{size=\large,series=\bfseries}
+%\setbeamercolor{frametitle}{fg=darkred}
+%
+%\setbeamerfont{block title}{size=\normalsize,series=\bfseries}
+%\setbeamertemplate{blocks}[rounded][shadow=true]
+%\setbeamercolor{block body}{bg=lightgrey}
+%\setbeamercolor{block title}{bg=mygrey,fg=black}
+%
+%%\setbeamersize{text margin left=1.5cm,text margin right=1.5cm} 
+%\setbeamerfont*{itemize/enumerate subbody}{parent=itemize/enumerate body}
+%\setbeamerfont*{itemize/enumerate subsubbody}{parent=itemize/enumerate
+%  body}
+
+\usepackage{color}
+\usepackage{setspace}
+%\setstretch{1.25}
+\setstretch{1.15}
+\usepackage{slashbox}
+\usepackage{hyperref}
+\usepackage{graphics}
+%\usepackage{fancybox}
+\usepackage{amsmath,amsthm,bm}
+%\usepackage[longnamesfirst]{natbib}
+\usepackage{natbib}
+\bibpunct{(}{)}{;}{a}{,}{,}
+
+%\usepackage[makestderr]{pythontex}
+
+\definecolor{markergreen}{rgb}{0.6, 1.0, 0}
+\definecolor{darkred}{rgb}{.7,0,0}
+\providecommand{\marker}[1]{\fcolorbox{markergreen}{markergreen}{{#1}}}
+\providecommand{\natp}[1]{\textcolor{darkred}{#1}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  Reset some default colors for itemize/enumerate/description environments
+%
+\setbeamercolor{description item}{fg=darkred!80!black}  %  Color of key word in desciption 
+%\setbeamercolor{alerted text}{fg=darkred!80!black}  %  Color of key word in desciption 
+\setbeamercolor{alerted text}{fg=darkblue}  %  Color of key word in desciption 
+%
+\definecolor{darkred}{rgb}{0.7,0,0}
+\definecolor{darkgreen}{rgb}{0,0.6,0}
+\setbeamercolor{item}{fg=darkgreen}  %  The dot color
+\definecolor{darkblue}{rgb}{0,0,0.8}
+\setbeamercolor{itemize/enumerate body}{fg=black}    % Text Level 1
+%\setbeamercolor{itemize/enumerate subbody}{fg=darkblue}    % Text Level 2
+\setbeamercolor{itemize/enumerate subsubbody}{fg=green!25!black}    % Text Level 3
+
+\setbeamertemplate{headline}{}
+
+\definecolor{grey}{RGB}{.25,.0,.25}
+%\definecolor{fsblue}{rgb}{0, 0, 1}
+
+%\setbeamerfont{note page}{size=\footnotesize}
+%\setbeamercolor{math text}{fg=darkblue}
+%\setbeamercolor{math text displayed}{fg=darkblue}
+%
+%\providecommand{\mgreenbox}[1]{\fcolorbox{green}{green}{$#1$}}
+%\providecommand{\mredbox}[1]{\fcolorbox{red}{white}{$#1$}}
+%\providecommand{\mredblockbox}[1]{\fcolorbox{red}{blocktitle.bg!.0!bg}{$#1$}}
+%\providecommand{\mbluebox}[1]{\fcolorbox{blue}{white}{$#1$}}
+%\providecommand{\mwhitebox}[1]{\fcolorbox{white}{white}{$#1$}}
+%\providecommand{\hyperl}[2]{\textcolor{blue}{\hyperlink{#1}{#2}}}
+%\providecommand{\Nzero}{\mathbb N_0}
+%
+%\providecommand{\bluebox}[1]{\text{\fcolorbox{blue!10}{blue!10}{#1}}}  
+%\providecommand{\redbox}[1]{\text{\fcolorbox{red!15}{red!15}{#1}}}  
+%\providecommand{\greenbox}[1]{\text{\fcolorbox{darkgreen!15}{darkgreen!15}{#1}}}  
+%
+%\providecommand{\limc}{\ensuremath{\lim_{C\rightarrow-\infty}}}
+%\providecommand{\limcp}{\ensuremath{\lim_{C\rightarrow\infty}}}
+%\providecommand{\ct}{\ensuremath{\cos \theta}}
+%\providecommand{\st}{\ensuremath{\sin \theta}}
+%\providecommand{\cp}{\ensuremath{\cos \varphi}}
+%\renewcommand{\sp}{\ensuremath{\sin \varphi}}
+\usepackage{multirow}
+
+\usepackage{mathrsfs}
+
+%% GENERAL DEFINITIONS
+\unitlength1cm
+
+%% COMMAND DEFINITIONS
+\newcommand{\E}{{\mathbb{E}}}
+%%\renewcommand{\E}{{\mathds E}}
+%%\renewcommand{\E}{{\varmathbb{E}}}
+%%\renewcommand{\E}{{\mathrm{I\!E}}}
+\providecommand{\R}{{\mathbb{R}}}
+\newcommand{\T}{{\mathbb{T}}}
+\newcommand{\Fb}{{\mathbb{F}}}
+\newcommand{\Eqn}{{\mathbb{E}}_{{\bf Q}_N}}
+\newcommand{\Eq}{{\mathbb{E}}_{{\bf Q}}}
+\newcommand{\Eqm}{{\mathbb{E}}_{{\bf Q}_M}}
+\newcommand{\EqT}{{\mathbb{E}}_{{\bf Q}_T}}
+\newcommand{\EqTz}{{\mathbb{E}}_{{\bf Q}_{T_2}}}
+\newcommand{\EqTe}{{\mathbb{E}}_{{\bf Q}_{T_1}}}
+\newcommand{\EqSe}{{\mathbb{E}}_{{\bf Q}_{S^1}}}
+\newcommand{\EqSz}{{\mathbb{E}}_{{\bf Q}_{S^2}}}
+\newcommand{\p}{{\bf P}}
+%\input{definitions}
+%\DeclareMathSizes{14.4}{15}{7}{7}
