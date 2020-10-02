@@ -11,7 +11,7 @@ Dates and Topics so far
 * 04.11.2020		*From unbiased MDI Feature Importance to Explainable AI for Trees*, by	Markus Loecher
 * 18.11.2020		*Copula Based Hedging*, by	Francis Liu
 * 02.12.2020		*Model-Agnostic Effects Plots*, by	Ulrike Grömping (Beuth Hochschule)
-* 16.12.2020			
+* 16.12.2020		*Statistics in NLP*, by Jatinderkumar R. Saini (Symbiosis University)
 * 13.01.2021			
 * 27.01.2021			
 			
